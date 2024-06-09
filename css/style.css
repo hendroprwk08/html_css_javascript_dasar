@@ -1,0 +1,115 @@
+nav a{
+    color: white;
+}
+
+.heading{
+    background-image: url('../images/bulan.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: black;
+
+    width: 100%;
+    height: 400px;
+    padding: 20px 0px;
+}
+
+.tengah{
+    width: 800px;
+    margin: auto; /* posisi tengah */
+}
+
+.tag-line{
+    position: absolute;
+    bottom: 0;
+}
+
+.judul{
+    color: white;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+.subjudul{
+    color: white;
+}
+
+.quotes{
+    display : flex;
+    justify-content: center;
+    flex-direction: column;
+
+    text-align: center;
+    height: 250px;
+    padding: 30 0;
+    font-size: 28pt;
+}
+
+.quotes p{
+    font-size: 12pt;
+    margin-top: 10pt;
+}
+
+.video-latar{
+    background-color: black;
+    padding: 20 0;
+    text-align: center;
+}
+
+.testimonial{
+    display : flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 100 0;
+}
+
+.testimonial .foto{
+    width: 100px;
+    height: 100px;  
+    padding: 0 20; 
+    overflow: hidden;
+}
+
+.foto img{    
+    border-radius: 50%;  
+}
+
+.testimonial > .kalimat{
+    width: 70%;
+    padding: 0 20;
+    color: gray;
+    font-size: 18pt;
+}   
+
+blockquote {
+    font-size: 1.5em;
+    line-height: 1.5em;
+  }
+  
+  blockquote:before {
+    content: open-quote;
+  }
+  
+  blockquote:after {
+    content: close-quote;
+  }
+  
+  blockquote:before,
+  blockquote:after {
+    display: inline-block;
+    vertical-align: bottom;
+    color: orange;
+    font-size: 4em;
+    top: .2em;
+    position: relative;
+  }
+
+footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+    padding: 30 0;
+    border-top: solid 1px rgb(201, 201, 201);
+    color: gray;
+    text-align: center;
+}

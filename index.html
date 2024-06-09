@@ -1,0 +1,147 @@
+<html>
+
+<head>
+    <title>Index</title>
+</head>
+
+<body>
+    <!-- navigasi -->
+    <nav>
+        <a href="index.html">Beranda</a> |
+        <a href="belajarcss.html">CSS</a> |
+        <a href="belajarjavascript.html">Javascript</a> |
+        <a href="https://www.yahoo.com/">Yahoo</a> |
+        <a href="mailto:nama@contoh.com">Kirim Email</a>
+    </nav>
+
+    <!-- heading -->
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <!-- paragraph -->
+    <p><i><b><u>Hidup</u></b></i> tanpa <b>belajar</b>, bagaikan <i>tubuh</i> tanpa ruh</p>
+
+    <!-- kutipan -->
+    <p><q>Banyak membaca, banyak tahu</q></p>
+
+    <!-- list -->
+    <!-- unordered list -->
+    <p><b>64<sup>th</sup> GRAMMNY AWARD 2022</b></p>
+    <ul>
+        <li>Allison Russell - Nightflyer</li>
+        <li>Jimmie Allen - Down Home</li>
+        <li>Mon Laferte - La Mujer</li>
+    </ul>
+
+    <!-- ordered list -->
+    <p>Presenter</p>
+    <ol>
+        <li>LeVar Burton</li>
+        <li>Sylvan Esso</li>
+        <li>Arlo Parks</li>
+        <li>Jimmie Allen</li>
+    </ol>
+
+    <!-- tabel -->
+    <table border="1" width="300">
+        <thead>
+            <td>Nama</td>
+            <td>Usia</td>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ahmad Sanusi</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>Andi Susanto</td>
+                <td>20</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- colspan = kolom yang merentang -->
+    <!-- rowspan = baris yang merentang -->
+    <table border="1" width="300">
+        <thead>
+            <td>Kanal</td>
+            <td>Jam</td>
+            <td>Acara</td>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="5">TransTV</td>
+                <td colspan="2"><b><i>Iklan</i></b></td>
+            </tr>
+            <tr>
+                <td>06:00 - 07:00</td>
+                <td>Bikin Laper</td>
+            </tr>
+            <tr>
+                <td>07:00 - 08:00</td>
+                <td rowspan="2">Kuis Pagi</td>
+            </tr>
+            <tr>
+                <td>08:00 - 09:00</td>
+            </tr>
+            <tr>
+                <td>09:00 - 10:00</td>
+                <td>Info Selebritis</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- fomulir -->
+    <h2>Formulir</h2>
+    <form action="#">
+        <p>
+            <label>Nama</label><br>
+            <input type="text" name="nama">
+        </p>
+        <p>
+            <label>Alamat</label><br>
+            <textarea name="alamat"></textarea>
+        </p>
+        <p>
+            <label>Status</label><br>
+            <select name="status">
+                <optgroup label="Pelajar">
+                    <option value="Mahasiswa">Mahasiswa</option>
+                    <option value="SMA/K">SMA/K</option>
+                </optgroup>
+                <optgroup label="Warga">
+                    <option value="Pedagang">Pedagang</option>
+                    <option value="Karyawan">Karyawan</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label>Kelamin</label><br>
+            <!-- memiliki 'name' yang sama -->
+            <input type="radio" name="kelamin" value="Pria"><label>Pria</label>
+            <input type="radio" name="kelamin" value="Wanita"><label>Wanita</label>
+        </p>
+        <p>
+            <label>Hobi</label><br>
+            <input type="checkbox" name="Musik" value="Musik">
+            <label>Musik</label><br>
+            <input type="checkbox" name="Olahraga" value="Olahraga">
+            <label>Olahraga</label><br>
+            <input type="checkbox" name="Membaca" value="Membaca">
+            <label>Membaca</label><br>
+            <input type="checkbox" name="Menonton Film" value="Menonton Film">
+            <label>Menonton Film</label>
+        </p>
+        <button type="reset">Ulangi</button>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+<footer>
+
+</footer>
+
+</html>
