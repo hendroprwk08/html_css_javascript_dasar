@@ -1,8 +1,8 @@
-nav a{
+nav a {
     color: white;
 }
 
-.heading{
+.heading {
     background-image: url('../images/bulan.jpg');
     background-repeat: no-repeat;
     background-position: center top;
@@ -13,28 +13,37 @@ nav a{
     padding: 20px 0px;
 }
 
-.tengah{
+.tengah {
     width: 800px;
-    margin: auto; /* posisi tengah */
+    margin: auto;
+    /* posisi tengah */
 }
 
-.tag-line{
-    position: absolute;
+.tag-text {
+    position: relative;
+    width: 100%;
+    height: 100%;
     bottom: 0;
 }
 
-.judul{
+.tag-line {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.judul {
     color: white;
     font-size: 20pt;
     font-weight: bold;
 }
 
-.subjudul{
+.subjudul {
     color: white;
 }
 
-.quotes{
-    display : flex;
+.quotes {
+    display: flex;
     justify-content: center;
     flex-direction: column;
 
@@ -44,64 +53,64 @@ nav a{
     font-size: 28pt;
 }
 
-.quotes p{
+.quotes p {
     font-size: 12pt;
     margin-top: 10pt;
 }
 
-.video-latar{
+.video-latar {
     background-color: black;
     padding: 20 0;
     text-align: center;
 }
 
-.testimonial{
-    display : flex;
+.testimonial {
+    display: flex;
     justify-content: center;
     flex-direction: row;
     padding: 100 0;
 }
 
-.testimonial .foto{
+.testimonial .foto {
     width: 100px;
-    height: 100px;  
-    padding: 0 20; 
+    height: 100px;
+    padding: 0 20;
     overflow: hidden;
 }
 
-.foto img{    
-    border-radius: 50%;  
+.foto img {
+    border-radius: 50%;
 }
 
-.testimonial > .kalimat{
+.testimonial>.kalimat {
     width: 70%;
     padding: 0 20;
     color: gray;
     font-size: 18pt;
-}   
+}
 
 blockquote {
     font-size: 1.5em;
     line-height: 1.5em;
-  }
-  
-  blockquote:before {
+}
+
+blockquote:before {
     content: open-quote;
-  }
-  
-  blockquote:after {
+}
+
+blockquote:after {
     content: close-quote;
-  }
-  
-  blockquote:before,
-  blockquote:after {
+}
+
+blockquote:before,
+blockquote:after {
     display: inline-block;
     vertical-align: bottom;
     color: orange;
     font-size: 4em;
     top: .2em;
     position: relative;
-  }
+}
 
 footer {
     left: 0;
@@ -113,3 +122,9 @@ footer {
     color: gray;
     text-align: center;
 }
+
+/* phone */
+@media only screen and (min-device-width: 480px) {}
+
+/* tablet */
+@media only screen and (min-width : 768px) {}

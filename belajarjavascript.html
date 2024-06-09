@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Javascript</title>
+
+    <!-- script diatas akan dijalankan pertama kali -->
+    <script>
+        // kalimat yang dibuat dengan javascript
+        document.write('Aku ditulis menggunakan Javascript');
+    </script>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Beranda</a> |
+        <a href="belajarcss.html">CSS</a> |
+        <a href="belajarjavascript.html">Javascript</a> |
+        <a href="https://www.yahoo.com/">Yahoo</a> |
+        <a href="mailto:nama@contoh.com">Kirim Email</a>
+    </nav>
+
+    <p id="variabel"></p>
+
+    <button id="klik_tombol">Klik aku</button>
+
+    <h3>Input</h3>
+    <input type="text" id="pesan">
+    <button id="simpan">SIMPAN</button>
+    <p id="hasil"></p>
+
+    <h3>Sembunyikan elemen</h3>
+    <button id="sembunyi">SEMBUNYIKAN TANGGAL</button>
+    <p id="tanggal">12-05-2024</p>
+
+    <h3>Ambil data cuaca</h3>
+    <button id="cuaca">Cuaca hari ini</button>
+    <p id="hasil_cuaca"></p>
+
+    <!-- script dibawah akan dijalan setelah halaman web selesai dimuat -->
+    <script>
+        // memasukkan nilai kedalam elemen HTML
+        // berdasarkan id
+        let nama = 'Handoko';
+        document.getElementById("variabel").innerHTML = 'Aku adalah ' + nama;
+
+        // memberikan event pada tombol klik_nama
+        let bt_klik_nama = document.getElementById("klik_tombol");
+        bt_klik_nama.addEventListener("click", function (e) { // e = event
+            alert('aku tombol');
+        });
+
+        // menambahkan nilai pada suatu elemen
+        let tx_pesan = document.getElementById('pesan');
+        let bt_simpan = document.getElementById('simpan');
+        bt_simpan.addEventListener('click', function (e) {
+            document.getElementById('hasil').innerHTML = 'Hasil:' + tx_pesan.value;
+        })
+
+        // menyembunyikan elemen html
+        let bt_sembunyi = document.getElementById('sembunyi');
+        bt_sembunyi.addEventListener('click', function (e) {
+            document.getElementById('tanggal').style.display = 'none';
+        })
+
+        // ambil kualitas udara
+        let bt_cuaca = document.getElementById('cuaca');
+        let p_hasil_cuaca = document.getElementById('hasil_cuaca');
+
+        bt_cuaca.addEventListener('click', function (e) {
+            bt_cuaca.innerHTML = 'Tunggu...';
+            bt_cuaca.disabled = true;
+            p_hasil_cuaca.innerHTML = 'Ambil data...';
+
+            ambilData();
+        })
+
+        function ambilData() {
+            // 1. objek XMLHttpRequest
+            let xhr = new XMLHttpRequest(); 
+
+            // 2. tautan data  
+            let url = 'https://api.carbonintensity.org.uk/intensity';
+            xhr.open("GET", url, true);
+
+            // jika akses data berhasil
+            xhr.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(this.responseText);
+                    p_hasil_cuaca.innerHTML = this.responseText;
+                    
+                    bt_cuaca.innerHTML = 'Cuaca hari ini';   
+                    bt_cuaca.disabled = false;
+                }
+            }
+
+            // kirim permintaan data
+            xhr.send();
+        }
+    </script>
+</body>
+
+</html>
