@@ -79,7 +79,14 @@
 
         function ambilData() {
             // 1. objek XMLHttpRequest
-            let xhr = new XMLHttpRequest(); 
+
+            /*
+            XMLHttpRequest() adalah objek bawaan pada JavaScript 
+            yang digunakan untuk mengirim permintaan HTTP ke server 
+            dan menerima respons dari server secara asynchronous
+            */
+
+            let xhr = new XMLHttpRequest();
 
             // 2. tautan data  
             let url = 'https://api.carbonintensity.org.uk/intensity';
@@ -90,8 +97,8 @@
                 if (this.readyState == 4 && this.status == 200) {
                     console.log(this.responseText);
                     p_hasil_cuaca.innerHTML = this.responseText;
-                    
-                    bt_cuaca.innerHTML = 'Cuaca hari ini';   
+
+                    bt_cuaca.innerHTML = 'Cuaca hari ini';
                     bt_cuaca.disabled = false;
                 }
             }
