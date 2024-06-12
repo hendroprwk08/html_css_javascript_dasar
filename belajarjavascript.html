@@ -8,7 +8,7 @@
 
     <!-- script diatas akan dijalankan pertama kali -->
     <script>
-        // kalimat yang dibuat dengan javascript
+		    // kalimat yang dibuat dengan javascript
         document.write('Aku ditulis menggunakan Javascript');
     </script>
 </head>
@@ -35,9 +35,9 @@
     <button id="sembunyi">SEMBUNYIKAN TANGGAL</button>
     <p id="tanggal">12-05-2024</p>
 
-    <h3>Ambil data cuaca</h3>
-    <button id="cuaca">Cuaca hari ini</button>
-    <p id="hasil_cuaca"></p>
+    <h3>Ambil data anime</h3>
+    <button id="anime">Ambil data Anime berupa JSON</button>
+    <p id="hasil_anime"></p>
 
     <!-- script dibawah akan dijalan setelah halaman web selesai dimuat -->
     <script>
@@ -66,40 +66,33 @@
         })
 
         // ambil kualitas udara
-        let bt_cuaca = document.getElementById('cuaca');
-        let p_hasil_cuaca = document.getElementById('hasil_cuaca');
+        let bt_anime = document.getElementById('anime');
+        let p_hasil_anime = document.getElementById('hasil_anime');
 
-        bt_cuaca.addEventListener('click', function (e) {
-            bt_cuaca.innerHTML = 'Tunggu...';
-            bt_cuaca.disabled = true;
-            p_hasil_cuaca.innerHTML = 'Ambil data...';
+        bt_anime.addEventListener('click', function (e) {
+            bt_anime.innerHTML = 'Tunggu...';
+            bt_anime.disabled = true;
+            p_hasil_anime.innerHTML = 'Ambil data...';
 
             ambilData();
         })
 
         function ambilData() {
             // 1. objek XMLHttpRequest
-
-            /*
-            XMLHttpRequest() adalah objek bawaan pada JavaScript 
-            yang digunakan untuk mengirim permintaan HTTP ke server 
-            dan menerima respons dari server secara asynchronous
-            */
-
-            let xhr = new XMLHttpRequest();
+            let xhr = new XMLHttpRequest(); 
 
             // 2. tautan data  
-            let url = 'https://api.carbonintensity.org.uk/intensity';
+            let url = 'https://raw.githubusercontent.com/jikan-me/jikan-rest/master/storage/api-docs/api-docs.json';
             xhr.open("GET", url, true);
 
             // jika akses data berhasil
             xhr.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
                     console.log(this.responseText);
-                    p_hasil_cuaca.innerHTML = this.responseText;
-
-                    bt_cuaca.innerHTML = 'Cuaca hari ini';
-                    bt_cuaca.disabled = false;
+                    p_hasil_anime.innerHTML = this.responseText;
+                    
+                    bt_anime.innerHTML = 'Ambil data Anime berupa JSON';   
+                    bt_anime.disabled = false;
                 }
             }
 
